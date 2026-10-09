@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Web Workshop</title>
+<title>Earnie's Super Ear Trainer</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{height:100%}
@@ -40,15 +40,15 @@ header{display:flex;justify-content:space-between;align-items:center;padding:8px
 <body>
 
 <div class="ov" id="welcome">
-  <h2>Web Workshop</h2>
+  <h2>Earnie's Super Ear Trainer</h2>
   <p>A note plays and its name shows on screen.</p>
-  <p>Tap the <b>key</b> of the note played <b id="w-n">2</b> steps back.<br>
+  <p>Tap the <b>key</b> of the note played <b id="w-n">1</b> steps back.<br>
      Green = correct. Red = wrong.</p>
-  <p>The first <b id="w-n2">2</b> notes are for listening only.</p>
+  <p>The first <b id="w-n2">1</b> notes are for listening only.</p>
   <p>N-Back level</p>
   <div class="nsel">
     <button id="n-dec" aria-label="lower N">−</button>
-    <span id="n-val">2</span>
+    <span id="n-val">1</span>
     <button id="n-inc" aria-label="raise N">+</button>
   </div>
   <button class="btn" id="btn-start">Start</button>
@@ -61,13 +61,13 @@ header{display:flex;justify-content:space-between;align-items:center;padding:8px
 </div>
 
 <header>
-  <div class="title">Web Workshop</div>
+  <div class="title">Earnie's Super Ear Trainer</div>
   <div class="hdr-right">
     <span><b id="tn">0</b>/<span id="tt">20</span></span>
     <button class="quit" id="btn-quit">Quit</button>
   </div>
 </header>
-<div class="nbar">N-Back: <b id="nl">2</b></div>
+<div class="nbar">N-Back: <b id="nl">1</b></div>
 <div class="prog"><div id="pf"></div></div>
 
 <div class="board">
@@ -91,7 +91,7 @@ const N_MIN = 1, N_MAX = 9;
 const KEY_N = 'webworkshop.n';
 
 function clampN(n) { return Math.min(N_MAX, Math.max(N_MIN, n)); }
-let N = clampN(parseInt(localStorage.getItem(KEY_N), 10) || 2);
+let N = clampN(parseInt(localStorage.getItem(KEY_N), 10) || 1);
 let total = sessionLength();
 let hist = [], t = 0, cur = null, targetNote = null;
 let active = false, scoring = false, answered = false;

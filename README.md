@@ -1,4 +1,4 @@
-# Super Ear Trainer
+# Earnie's Super Ear Trainer
 
 Phone-friendly dual N-back style ear training. Tap the piano key of the note played N steps back.
 
